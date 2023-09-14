@@ -34,7 +34,7 @@ public class LoginStepdefination{
 
 	WebElement quoteElement = driver.findElement(By.xpath("//strong[contains(text(), 'BOTTIE QUOTE')]"));
     assertNotNull(quoteElement);
-    
+    //
 }
 
 
