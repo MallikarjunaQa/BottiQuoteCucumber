@@ -10,9 +10,12 @@ import cucumber.api.junit.Cucumber;
 	@RunWith(Cucumber.class)
 	@CucumberOptions(
 			
-			features = "C:\\Users\\mallikarjuna.ss\\Desktop\\CucumberSeleniumFramework-master\\CucumberSeleniumFramework-master\\src\\main\\java\\Features" //the path of the feature files
-			,glue={"stepDefinitions"} //the path of the step definition files
-			
+			features = "C:\\Users\\mallikarjuna.ss\\Desktop\\CucumberSeleniumFramework-master\\CucumberSeleniumFramework-master\\src\\main\\java\\Features", //the path of the feature files
+			glue={"stepDefinitions"},//the path of the step definition files
+		/*	format = {"pretty","html:tst-outout"}*/
+			monochrome = true,
+			strict = true,
+			dryRun =false
 			)
 	 
 	public class TestRunner {
