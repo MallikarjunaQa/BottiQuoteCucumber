@@ -12,7 +12,7 @@ import cucumber.api.junit.Cucumber;
 			
 			features = "C:\\Users\\mallikarjuna.ss\\Desktop\\CucumberSeleniumFramework-master\\CucumberSeleniumFramework-master\\src\\main\\java\\Features", //the path of the feature files
 			glue={"stepDefinitions"},//the path of the step definition files
-		/*	format = {"pretty","html:tst-outout"}*/
+			format= {"pretty","html:test-outout", "json:json_output/cucumber.json", "junit:junit_xml/cucumber.xml"},
 			monochrome = true,
 			strict = true,
 			dryRun =false
