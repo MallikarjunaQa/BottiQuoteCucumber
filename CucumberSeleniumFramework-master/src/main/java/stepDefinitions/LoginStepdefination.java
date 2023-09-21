@@ -14,26 +14,27 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
-
-
-public class LoginStepdefination extends BaseClass {
+public class LoginStepdefination{
 
 	public WebDriver driver;
 	public LoginPage lp;
 
+	
 	@Given("^the user opens a Chrome browser$")
 	public void the_user_opens_a_Chrome_browser() {
-
-		System.setProperty("webdriver.chrome.driver",
-				"C:\\Users\\mallikarjuna.ss\\Desktop\\CucumberSeleniumFramework-master\\Drivers\\chromedriver.exe");
+		
+		System.setProperty("webdriver.chrome.driver","C:\\Users\\mallikarjuna.ss\\Desktop\\CucumberSeleniumFramework-master\\Drivers\\chromedriver.exe");
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
+
 		lp = new LoginPage(driver);
+
 	}
 
 	@When("^the user enter to the BQ login \"(.*)\"$")
 	public void the_user_enter_to_the_BQ_login_URL(String baseurl) {
-		lp.EnterBaseUrl(baseurl);
+	    lp.EnterBaseUrl(baseurl);
+		
 	}
 
 	@When("^varify title$")
@@ -105,11 +106,11 @@ public class LoginStepdefination extends BaseClass {
 
 	@When("^succeful authentication mesg$")
 	public void succeful_authentication_mesg() {
-		
+
 		WebDriverWait wait = new WebDriverWait(driver, 10); // Adjust the timeout as needed
 		String actual = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("msgDisplay"))).getText();
 		String expectedsuccemsg = "User is successully authenticated.";
-		assertEquals("User is successully authenticated,message modified?",expectedsuccemsg,actual);
+		assertEquals("User is successully authenticated,message modified?", expectedsuccemsg, actual);
 
 	}
 
@@ -117,10 +118,8 @@ public class LoginStepdefination extends BaseClass {
 	public void unimicorn_logo_present() {
 
 		WebDriverWait wait = new WebDriverWait(driver, 10); // Adjust the timeout as needed
-		wait.until(ExpectedConditions.presenceOfElementLocated(lp.LogoVrify()));
-		WebElement logoElement = driver.findElement(By.id("mainImageLogo"));
-		assert(logoElement != null);
-		
+		WebElement logoElement = wait.until(ExpectedConditions.presenceOfElementLocated(lp.LogoVrify()));
+		assert (logoElement != null);
 
 	}
 
@@ -134,8 +133,10 @@ public class LoginStepdefination extends BaseClass {
 		assertEquals("Home Page title does not match.", expecteddashboardTitle, actualdashboardTitle);
 	}
 
+	
 	@Then("^quite the browser$")
 	public void close_the_browser() {
-		driver.quit();
+		 driver.quit();
+		
 	}
 }

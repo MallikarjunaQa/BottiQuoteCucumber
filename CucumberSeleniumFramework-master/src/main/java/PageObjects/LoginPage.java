@@ -5,7 +5,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 
-public class LoginPage {
+
+
+public class LoginPage  {
 
 	public WebDriver driver;
 
@@ -19,7 +21,7 @@ public class LoginPage {
 	By InputName_or_Emial = By.xpath("//input[@id='inputEmail']");
 	By InputPassword = By.xpath("//input[@id='inputPassword']");
 	By InputLanguuge = By.xpath("//select[@id='inputLanguage']");
-	By UnimicronLogo = By.xpath("//img[@id='mainImageLogo']");
+	By UnimicronLogo = By.xpath("//img[@src='image/logo.png']");
 	By SignInButton = By.xpath("//button[normalize-space()='Sign In']");
 
 	// Action method

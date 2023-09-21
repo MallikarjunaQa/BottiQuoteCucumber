@@ -2,7 +2,7 @@ Feature: Login to BQ Dashboard
 
   Scenario Outline: User logs in to BQ Dashboard
     Given the user opens a Chrome browser
-    When the user enter to the BQ login "http://192.168.150.20:8080/bottie_quote/login.html"
+    When the user enter to the BQ login "<baseurl>"
     And varify title
     And varify LoginPage LargeBluebox
     And user will see With botti quote in bold latters
@@ -20,6 +20,10 @@ Feature: Login to BQ Dashboard
     
  
    Examples:
-   |username                     |Password        |
-   |mallikarjuna.ss              |Malli@123karjuna|
-   |mallikarjuna.ss@ncs-india.com|Malli@123karjuna|
+ 
+    |baseurl                                           ||username                     |Password        |
+    |http://192.168.150.20:8080/bottie_quote/login.html||mallikarjuna.ss              |Malli@123karjuna|
+   #|mallikarjuna.ss@ncs-india.com|Malli@123karjuna|
+   
+   
+   
