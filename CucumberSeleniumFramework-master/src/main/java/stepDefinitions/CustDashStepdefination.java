@@ -48,9 +48,7 @@ public class CustDashStepdefination {
 	  verifies_the_existence_and_clickability_of_the_side_navigation_bar() {
 		  Cd.SideNavexpand();
 		  Cd.SideNavsubexpand();
-		  Cd.CloseSideNavexpand();
-	
-		  
+		  Cd.CloseSideNavexpand(); 
 	  }
 	  
 	  

@@ -4,7 +4,6 @@ import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -85,9 +84,8 @@ public class CustDashboard {
 		
 		  WebElement CloseSideNavexpandclcik = driver.findElement(CloseSideNavexpand);
 		  boolean isClickable2 = isElementClickable(CloseSideNavexpandclcik);
-		  isClickable2 = false;
-		  Assert.assertTrue("Subside nave bar Element is not clickable.",
-		  isClickable2);
+		  
+		  Assert.assertTrue("Subside nave bar Element is not clickable.",isClickable2);
 		 
 	}
 
@@ -96,8 +94,11 @@ public class CustDashboard {
 
 	}
 
-	public WebElement UnimicironText() {
-		return driver.findElement(UnimicironText);
+	public void UnimicironText() {
+		WebElement unimicronLogo = driver.findElement(UnimicironText);
+		boolean isClickable2 = unimicronLogo.isDisplayed();
+		isClickable2 = false;
+		Assert.assertTrue( "Unimicron Germany logo is not displayed on the page",unimicronLogo.isDisplayed());
 
 	}
 
