@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite failures="1" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="2" time="22.574973">
-<testcase classname="Customer Quotation Dashboard page" name="User navigates to Customer Quotation Dashboard page" time="8.971651">
-<failure message="java.lang.NullPointerException&#13;&#10;&#9;at stepDefinitions.CustDashStepdefination.quit_the_browser(CustDashStepdefination.java:125)&#13;&#10;&#9;at ✽.Then quit the browser(Custdash.feature:19)&#13;&#10;"><![CDATA[Given the User is logged in with "http://192.168.150.20:8080/bottie_quote/login.html" already on the Customer Quotation Dashboard page.passed
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="2" time="22.415861">
+<testcase classname="Customer Quotation Dashboard page" name="User navigates to Customer Quotation Dashboard page" time="10.052248">
+<system-out><![CDATA[Given the User is logged in with "http://192.168.150.20:8080/bottie_quote/login.html" already on the Customer Quotation Dashboard page.passed
 When the User navigates to the Customer Quotations Page By "mallikarjuna.ss" and "Malli@123karjuna".passed
 And verifies the existence and clickability of the side navigation bar......passed
 And verifies the existence of the quotation table with table headers........passed
@@ -16,15 +16,10 @@ And verifies the application version........................................pass
 And verifies the existence of the language icon and confirms its clickability.passed
 And verifies the existence of the logout icon...............................passed
 Then click on the login icon, and the user is taken to the login page.......passed
-Then quit the browser.......................................................failed
-
-StackTrace:
-java.lang.NullPointerException
-	at stepDefinitions.CustDashStepdefination.quit_the_browser(CustDashStepdefination.java:125)
-	at ✽.Then quit the browser(Custdash.feature:19)
-]]></failure>
+Then quit the browser.......................................................passed
+]]></system-out>
 </testcase>
-<testcase classname="Login to BQ Dashboard" name="User logs in to BQ Dashboard" time="13.603322">
+<testcase classname="Login to BQ Dashboard" name="User logs in to BQ Dashboard" time="12.363613">
 <system-out><![CDATA[Given the user opens a Chrome browser.......................................passed
 When the user enter to the BQ login "http://192.168.150.20:8080/bottie_quote/login.html".passed
 And varify title............................................................passed

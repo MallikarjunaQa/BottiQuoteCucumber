@@ -104,7 +104,7 @@ formatter.match({
   "location": "CustDashStepdefination.the_User_is_logged_in_with_already_on_the_Customer_Quotation_Dashboard_page(String)"
 });
 formatter.result({
-  "duration": 5961600400,
+  "duration": 6630625200,
   "status": "passed"
 });
 formatter.match({
@@ -121,91 +121,91 @@ formatter.match({
   "location": "CustDashStepdefination.the_User_navigates_to_Customer_Quotations_Page(String,String)"
 });
 formatter.result({
-  "duration": 3009776000,
+  "duration": 60500,
   "status": "passed"
 });
 formatter.match({
   "location": "CustDashStepdefination.verifies_the_existence_and_clickability_of_the_side_navigation_bar()"
 });
 formatter.result({
-  "duration": 10800,
+  "duration": 3421464100,
   "status": "passed"
 });
 formatter.match({
   "location": "CustDashStepdefination.verifies_the_existence_of_the_quotation_table_with_table_headers()"
 });
 formatter.result({
-  "duration": 7600,
+  "duration": 9900,
   "status": "passed"
 });
 formatter.match({
   "location": "CustDashStepdefination.verifies_the_existence_and_clickability_of_the_Search_button()"
 });
 formatter.result({
-  "duration": 7000,
+  "duration": 7500,
   "status": "passed"
 });
 formatter.match({
   "location": "CustDashStepdefination.verifies_the_existence_and_clickability_of_the_Create_RFQ_button()"
 });
 formatter.result({
-  "duration": 7100,
+  "duration": 7300,
   "status": "passed"
 });
 formatter.match({
   "location": "CustDashStepdefination.verifies_the_existence_of_the_Search_Dropdown_with_a_specific_value()"
 });
 formatter.result({
-  "duration": 7000,
+  "duration": 7500,
   "status": "passed"
 });
 formatter.match({
   "location": "CustDashStepdefination.verifies_the_existence_and_clickability_of_the_Clear_button()"
 });
 formatter.result({
-  "duration": 8300,
+  "duration": 7000,
   "status": "passed"
 });
 formatter.match({
   "location": "CustDashStepdefination.verifies_the_exisistence_of_the_search_text_box_and_confirms_that_the_user_can_enter_text()"
 });
 formatter.result({
-  "duration": 7300,
+  "duration": 7200,
   "status": "passed"
 });
 formatter.match({
   "location": "CustDashStepdefination.verifies_the_presence_of_the_Unimicron_logo()"
 });
 formatter.result({
-  "duration": 9000,
+  "duration": 8800,
   "status": "passed"
 });
 formatter.match({
   "location": "CustDashStepdefination.verifies_the_BQ_title()"
 });
 formatter.result({
-  "duration": 7000,
+  "duration": 6900,
   "status": "passed"
 });
 formatter.match({
   "location": "CustDashStepdefination.verifies_the_application_version()"
 });
 formatter.result({
-  "duration": 7700,
+  "duration": 7500,
   "status": "passed"
 });
 formatter.match({
   "location": "CustDashStepdefination.verifies_the_existence_of_the_language_icon_and_confirms_its_clickability()"
 });
 formatter.result({
-  "duration": 6700,
+  "duration": 7100,
   "status": "passed"
 });
 formatter.match({
   "location": "CustDashStepdefination.verifies_the_existence_of_the_logout_icon()"
 });
 formatter.result({
-  "duration": 6600,
+  "duration": 6900,
   "status": "passed"
 });
 formatter.match({
@@ -219,9 +219,8 @@ formatter.match({
   "location": "CustDashStepdefination.quit_the_browser()"
 });
 formatter.result({
-  "duration": 175700,
-  "error_message": "java.lang.NullPointerException\r\n\tat stepDefinitions.CustDashStepdefination.quit_the_browser(CustDashStepdefination.java:125)\r\n\tat ✽.Then quit the browser(Custdash.feature:19)\r\n",
-  "status": "failed"
+  "duration": 7900,
+  "status": "passed"
 });
 formatter.uri("Login.feature");
 formatter.feature({
@@ -439,7 +438,7 @@ formatter.match({
   "location": "LoginStepdefination.the_user_opens_a_Chrome_browser()"
 });
 formatter.result({
-  "duration": 2200650700,
+  "duration": 3952452200,
   "status": "passed"
 });
 formatter.match({
@@ -452,49 +451,49 @@ formatter.match({
   "location": "LoginStepdefination.the_user_enter_to_the_BQ_login_URL(String)"
 });
 formatter.result({
-  "duration": 3841716500,
+  "duration": 4131548400,
   "status": "passed"
 });
 formatter.match({
   "location": "LoginStepdefination.varify_title()"
 });
 formatter.result({
-  "duration": 5260500,
+  "duration": 3419200,
   "status": "passed"
 });
 formatter.match({
   "location": "LoginStepdefination.varify_LoginPage_LargeBluebox()"
 });
 formatter.result({
-  "duration": 33295500,
+  "duration": 24081500,
   "status": "passed"
 });
 formatter.match({
   "location": "LoginStepdefination.user_will_see_Withbotti_quote_in_bolt_latters()"
 });
 formatter.result({
-  "duration": 50583800,
+  "duration": 12935900,
   "status": "passed"
 });
 formatter.match({
   "location": "LoginStepdefination.placeholder_as_User_Name()"
 });
 formatter.result({
-  "duration": 31415400,
+  "duration": 41608800,
   "status": "passed"
 });
 formatter.match({
   "location": "LoginStepdefination.placeholder_as_Password()"
 });
 formatter.result({
-  "duration": 36935200,
+  "duration": 26499100,
   "status": "passed"
 });
 formatter.match({
   "location": "LoginStepdefination.by_defult_in_English()"
 });
 formatter.result({
-  "duration": 83876300,
+  "duration": 94022000,
   "status": "passed"
 });
 formatter.match({
@@ -507,7 +506,7 @@ formatter.match({
   "location": "LoginStepdefination.enters_the_username(String)"
 });
 formatter.result({
-  "duration": 60352400,
+  "duration": 70896300,
   "status": "passed"
 });
 formatter.match({
@@ -520,42 +519,42 @@ formatter.match({
   "location": "LoginStepdefination.enters_the_password(String)"
 });
 formatter.result({
-  "duration": 52100100,
+  "duration": 66096400,
   "status": "passed"
 });
 formatter.match({
   "location": "LoginStepdefination.clicks_on_the_login_button()"
 });
 formatter.result({
-  "duration": 52739000,
+  "duration": 41416700,
   "status": "passed"
 });
 formatter.match({
   "location": "LoginStepdefination.succeful_authentication_mesg()"
 });
 formatter.result({
-  "duration": 1144140700,
+  "duration": 1163004900,
   "status": "passed"
 });
 formatter.match({
   "location": "LoginStepdefination.unimicorn_logo_present()"
 });
 formatter.result({
-  "duration": 22333200,
+  "duration": 36000600,
   "status": "passed"
 });
 formatter.match({
   "location": "LoginStepdefination.the_user_should_be_on_the_BQ_dashboard_page()"
 });
 formatter.result({
-  "duration": 1728035600,
+  "duration": 1722929100,
   "status": "passed"
 });
 formatter.match({
   "location": "LoginStepdefination.close_the_browser()"
 });
 formatter.result({
-  "duration": 4259887400,
+  "duration": 976702200,
   "status": "passed"
 });
 });
