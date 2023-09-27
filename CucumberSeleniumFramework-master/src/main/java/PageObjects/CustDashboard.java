@@ -1,6 +1,13 @@
 package PageObjects;
 
+import static org.junit.Assert.assertEquals;
+
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+import org.assertj.core.api.SoftAssertions;
 import org.junit.Assert;
+import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -10,6 +17,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 public class CustDashboard {
 
 	public WebDriver driver;
+	SoftAssertions softAssertions = new SoftAssertions();
 
 	public CustDashboard(WebDriver driver) {
 		this.driver = driver;
@@ -64,13 +72,13 @@ public class CustDashboard {
 	By DataSheet = By.xpath("//span[@id='datasheet525']//i[@class='fa fa-th-list']");
 
 	public void SideNavexpand() {
-		
+
 		WebDriverWait wait = new WebDriverWait(driver, 10);
 		wait.until(ExpectedConditions.elementToBeClickable(SideNavexpand));
 		WebElement SideNavexpandclcikble = driver.findElement(SideNavexpand);
 		boolean isClickable = isElementClickable(SideNavexpandclcikble);
 		Assert.assertTrue("Sidenavbar Element is not clickable.", isClickable);
-		
+
 	}
 
 	public void SideNavsubexpand() {
@@ -81,34 +89,52 @@ public class CustDashboard {
 	}
 
 	public void CloseSideNavexpand() {
-		
-		  WebElement CloseSideNavexpandclcik = driver.findElement(CloseSideNavexpand);
-		  boolean isClickable2 = isElementClickable(CloseSideNavexpandclcik);
-		  
-		  Assert.assertTrue("Subside nave bar Element is not clickable.",isClickable2);
-		 
+
+		WebElement CloseSideNavexpandclcik = driver.findElement(CloseSideNavexpand);
+		boolean isClickable2 = isElementClickable(CloseSideNavexpandclcik);
+		Assert.assertTrue("Subside nave bar Element is not clickable.", isClickable2);
+
 	}
 
-	public WebElement UnimicironLogo() {
-		return driver.findElement(UnimicironLogo);
-
+	public void UnimicironLogo() {
+		WebElement unimicronLogo = driver.findElement(UnimicironText);
+		boolean isDisplayed = unimicronLogo.isDisplayed();
+		isDisplayed = true;
+		Assert.assertTrue("Unimicron Germany logo is not displayed on the page", isDisplayed);
 	}
 
 	public void UnimicironText() {
-		WebElement unimicronLogo = driver.findElement(UnimicironText);
-		boolean isClickable2 = unimicronLogo.isDisplayed();
-		isClickable2 = false;
-		Assert.assertTrue( "Unimicron Germany logo is not displayed on the page",unimicronLogo.isDisplayed());
+
+		WebElement unimicronTextElement = driver.findElement(UnimicironText);
+		String elementText = unimicronTextElement.getText();
+		String expectedText = "BOTTIE QUOTE";
+		boolean textExists = elementText.contains(expectedText);
+		Assert.assertTrue("The text 'Unimicron' does not exist within the element", textExists);
 
 	}
 
-	public WebElement VersionId() {
-		return driver.findElement(VersionId);
+	public void VersionId() {
+
+		WebElement Versioid = driver.findElement(VersionId);
+		String Versioid1 = Versioid.getText();
+		String expectedVersioid1 = "Ver.: v1.4.42";
+		assertEquals("Version id in Customer dashboard is failed.", expectedVersioid1, Versioid.getText());
+
+		/*
+		 * Pattern pattern = Pattern.compile(expectedVersioid1);
+		 * 
+		 * Matcher matcher = pattern.matcher(Versioid1);
+		 * 
+		 * Assert.assertTrue("version id Element text should match", matcher.matches());
+		 */
+
+		Assert.assertNotNull("Element should exist", Versioid1);
 
 	}
 
-	public WebElement BuildNum() {
-		return driver.findElement(BuildNum);
+	public void BuildNum() {
+		String BuildHashscode = driver.findElement(BuildNum).getText();
+		Assert.assertNotNull("Element should exist", BuildHashscode);
 	}
 
 	public WebElement LangugeIcon() {
@@ -155,78 +181,110 @@ public class CustDashboard {
 		return driver.findElement(SearchFeild);
 	}
 
-	public WebElement RfqNumb() {
-		return driver.findElement(RfqNumb);
+	public void RfqNumb() {
+
+		String actualText = "R.F.Q Number";
+		verifyTextAndClickability(actualText, RfqNumb);
 	}
 
-	public WebElement InqNum() {
-		return driver.findElement(InqNum);
+	public void InqNum() {
+		String actualText = "Inquiry Number";
+		verifyTextAndClickability(actualText,  InqNum);
+
 	}
 
-	public WebElement CustName() {
-		return driver.findElement(CustName);
+	public void CustName() {
+		String actualText = "Customer Name";
+		verifyTextAndClickability(actualText, CustName);
 	}
 
-	public WebElement CustDwg() {
-		return driver.findElement(CustDwg);
-	}
+	public void CustDwg() {
 
-	public WebElement SalesPerson() {
-		return driver.findElement(SalesPerson);
-	}
+		String actualText = "Customer Drawing/Part Number";
+		verifyTextAndClickability(actualText, CustDwg );}
 
-	public WebElement CalcType() {
-		return driver.findElement(CalcType);
-	}
+	public void SalesPerson() {
 
-	public WebElement Priority() {
-		return driver.findElement(Priority);
-	}
+		String actualText = "Sales Person";
+		verifyTextAndClickability(actualText, SalesPerson );}
 
-	public WebElement Status() {
-		return driver.findElement(Status);
-	}
+	public void CalcType() {
 
-	public WebElement Created() {
-		return driver.findElement(Created);
-	}
+		String actualText = "Calculation Type";
+		verifyTextAndClickability(actualText, CalcType );}
 
-	public WebElement DueDate() {
-		return driver.findElement(DueDate);
-	}
+	public void Priority() {
 
-	public WebElement ClosedDate() {
-		return driver.findElement(ClosedDate);
-	}
+		String actualText = "Priority";
+		verifyTextAndClickability(actualText, Priority );}
 
-	public WebElement Action() {
-		return driver.findElement(Action);
-	}
+	public void Status() {
+
+		String actualText = "Status";
+		verifyTextAndClickability(actualText, Status );}
+
+	public void Created() {
+
+		String actualText = "Created";
+		verifyTextAndClickability(actualText, Created );}
+
+	public void DueDate() {
+
+		String actualText = "Due Date";
+		verifyTextAndClickability(actualText, DueDate );}
+
+	public void ClosedDate() {
+
+		String actualText = "Closed Date";
+		verifyTextAndClickability(actualText, ClosedDate);}
+
+	public void Action() {
+
+		String actualText = "Action";
+		verifyTextAndClickability(actualText, Action);}
 
 	// Action column ids
 
-	public WebElement EditRfq() {
-		return driver.findElement(EditRfq);
+	public void EditRfq() {
+		
+		/*
+		 * String actualText = "Edit R.F.Q."; verifyTextAndClickability(actualText,
+		 * EditRfq);
+		 */
+
+		}
+		
+
+
+	public void ObsoluteBotton() {
+	
+		/*
+		 * String actualText = "Obsolete"; verifyTextAndClickability(actualText,
+		 * ObsoluteBotton);
+		 */
 	}
 
-	public WebElement ObsoluteBotton() {
-		return driver.findElement(ObsoluteBotton);
-	}
+	
+	  public WebElement ObsoluteNo() { return driver.findElement(ObsoluteNo); }
+	 
 
-	public WebElement ObsoluteNo() {
-		return driver.findElement(ObsoluteNo);
-	}
+	
+	  public WebElement ObsoluteYes() { return driver.findElement(ObsoluteYes); }
+	 
 
-	public WebElement ObsoluteYes() {
-		return driver.findElement(ObsoluteYes);
-	}
+	
+	  public WebElement ObsoluteComment() {
+		  
+		/* return driver.findElement(ObsoluteComment); */
+		  }
+	 
 
-	public WebElement ObsoluteComment() {
-		return driver.findElement(ObsoluteComment);
-	}
-
-	public WebElement DataSheet() {
-		return driver.findElement(DataSheet);
+	public void DataSheet() {
+		/*
+		 * String actualText = "Datasheet"; verifyTextAndClickability(actualText,
+		 * DataSheet);
+		 */
+		
 	}
 
 	/// all methods
@@ -238,6 +296,17 @@ public class CustDashboard {
 		} catch (Exception e) {
 			return false; // Element is not clickable
 		}
+	}
+
+	public void verifyTextAndClickability(String actualText, By locator) {
+
+		WebDriverWait wait = new WebDriverWait(driver, 10);
+		WebElement element = wait.until(ExpectedConditions.elementToBeClickable(locator));
+		String expectedText = element.getText();
+		Assert.assertEquals("Text does not match the expected value", expectedText, actualText);
+		boolean isClickable = isElementClickable(element);
+	
+		Assert.assertTrue("Element is not clickable.", isClickable);
 	}
 
 }

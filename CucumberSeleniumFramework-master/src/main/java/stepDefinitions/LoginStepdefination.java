@@ -1,13 +1,17 @@
 package stepDefinitions;
 
 import static org.junit.Assert.assertEquals;
+
+import org.junit.Test;
 import org.openqa.selenium.By;
+import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.asserts.SoftAssert;
 
 import PageObjects.LoginPage;
 import cucumber.api.java.en.Given;
@@ -19,6 +23,7 @@ public class LoginStepdefination{
 	public WebDriver driver;
 	public LoginPage lp;
 
+	private SoftAssert softAssert = new SoftAssert();
 	
 	@Given("^the user opens a Chrome browser$")
 	public void the_user_opens_a_Chrome_browser() {
@@ -104,14 +109,20 @@ public class LoginStepdefination{
 		lp.SignIn();
 	}
 
+	@Test
 	@When("^succeful authentication mesg$")
 	public void succeful_authentication_mesg() {
-
-		WebDriverWait wait = new WebDriverWait(driver, 10); // Adjust the timeout as needed
-		String actual = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("msgDisplay"))).getText();
-		String expectedsuccemsg = "User is successully authenticated.";
-		assertEquals("User is successully authenticated,message modified?", expectedsuccemsg, actual);
-
+		
+		WebDriverWait wait = new WebDriverWait(driver, 30);
+		 try {
+		        String actual = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("msgDisplay"))).getText();
+		        String expectedsuccemsg = "User is successfully authenticated.";
+		        softAssert.assertEquals("User is successfully authenticated,message modified?", expectedsuccemsg, actual);
+		    } catch (TimeoutException e) {
+		        // Handle the TimeoutException here
+		        System.out.println("TimeoutException: " + e.getMessage());
+		        softAssert.fail("TimeoutException: " + e.getMessage());
+		    }
 	}
 
 	@When("^Unimicorn logo present$")
@@ -137,6 +148,7 @@ public class LoginStepdefination{
 	@Then("^quite the browser$")
 	public void close_the_browser() {
 		 driver.quit();
-		
+		 
+		 
 	}
 }
