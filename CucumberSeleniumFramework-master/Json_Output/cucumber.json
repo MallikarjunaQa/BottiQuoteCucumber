@@ -4,6 +4,254 @@
     "elements": [
       {
         "line": 3,
+        "name": "Create RFQ with Valid Information and Verify Additional Conditions",
+        "description": "",
+        "id": "rfq-creation-on-customer-dashboard;create-rfq-with-valid-information-and-verify-additional-conditions",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 5685530700,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "User navigates to the Customer Dashboard",
+            "match": {
+              "location": "CreateRfqStepdefination.user_navigates_to_the_Customer_Dashboard()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 4905086400,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "User clicks on the Create RFQ button",
+            "match": {
+              "location": "CreateRfqStepdefination.user_clicks_on_the_Create_RFQ_button()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 3872700,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "navigated to the Create RFQ page",
+            "match": {
+              "location": "CreateRfqStepdefination.navigated_to_the_Create_RFQ_page()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 183723600,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "Inquiry date is the same as the created date",
+            "match": {
+              "location": "CreateRfqStepdefination.inquiry_date_is_the_same_as_the_created_date()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 167436700,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "If priority is normal, Due date UMG to NCS is four days ahead and is disabled",
+            "match": {
+              "location": "CreateRfqStepdefination.if_priority_is_normal_Due_date_UMG_to_NCS_is_4_days_ahead_and_is_disabled()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 11900,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "If priority is QTA, Due date NCS to UMG is the next date of the created date",
+            "match": {
+              "location": "CreateRfqStepdefination.if_priority_is_QTA_Due_date_NCS_to_UMG_is_the_next_date_of_the_created_date()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 7500,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "Status UMG to Cust is open by default and is disabled",
+            "match": {
+              "location": "CreateRfqStepdefination.status_UMG_to_Cust_is_open_by_default_and_is_disabled()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 7500,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "Status NCS to UMG is open and is disabled",
+            "match": {
+              "location": "CreateRfqStepdefination.status_NCS_to_UMG_is_open_and_is_disabled()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 7600,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "User enters the account number",
+            "match": {
+              "location": "CreateRfqStepdefination.user_enters_the_account_number()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 7700,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "Customer number is not null and is disabled",
+            "match": {
+              "location": "CreateRfqStepdefination.customer_number_is_not_null_and_is_disabled()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 22100,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "Customer city is not null and is disabled",
+            "match": {
+              "location": "CreateRfqStepdefination.customer_city_is_not_null_and_is_disabled()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 6800,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "Account manager is not null and selected from dropdown",
+            "match": {
+              "location": "CreateRfqStepdefination.account_manager_is_not_null_and_selected_from_dropdown()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 6900,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "Salesperson is not null and selected from dropdown",
+            "match": {
+              "location": "CreateRfqStepdefination.salesperson_is_not_null_and_selected_from_dropdown()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 6700,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "User adds remarks from the sales area",
+            "match": {
+              "location": "CreateRfqStepdefination.user_adds_remarks_from_the_sales_area()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 6800,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "User adds comments from the NCS engineer area",
+            "match": {
+              "location": "CreateRfqStepdefination.user_adds_comments_from_the_NCS_engineer_area()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 6800,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "User attaches files (drag \u0026 drop, upload, remove)",
+            "match": {
+              "location": "CreateRfqStepdefination.user_attaches_files_drag_drop_upload_remove()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 6900,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "User verifies top bar features",
+            "match": {
+              "location": "CreateRfqStepdefination.user_verifies_top_bar_features()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 6700,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "User verifies side nav bar features",
+            "match": {
+              "location": "CreateRfqStepdefination.user_verifies_side_nav_bar_features()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 12100,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "RFQ is successfully created",
+            "match": {
+              "location": "CreateRfqStepdefination.rfq_is_successfully_created()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "RFQ Creation on Customer Dashboard",
+    "description": "",
+    "id": "rfq-creation-on-customer-dashboard",
+    "keyword": "Feature",
+    "uri": "CreateRFq.feature"
+  },
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 3,
         "name": "User navigates to Customer Quotation Dashboard page",
         "description": "",
         "id": "customer-quotation-dashboard-page;user-navigates-to-customer-quotation-dashboard-page",
@@ -12,7 +260,7 @@
         "steps": [
           {
             "result": {
-              "duration": 6915644100,
+              "duration": 5509979100,
               "status": "passed"
             },
             "line": 4,
@@ -30,7 +278,7 @@
           },
           {
             "result": {
-              "duration": 63000,
+              "duration": 70000,
               "status": "passed"
             },
             "line": 5,
@@ -52,7 +300,7 @@
           },
           {
             "result": {
-              "duration": 2159925100,
+              "duration": 2885506200,
               "status": "passed"
             },
             "line": 6,
@@ -64,7 +312,7 @@
           },
           {
             "result": {
-              "duration": 1347062400,
+              "duration": 1407819700,
               "status": "passed"
             },
             "line": 7,
@@ -76,7 +324,7 @@
           },
           {
             "result": {
-              "duration": 4090600,
+              "duration": 29474400,
               "status": "passed"
             },
             "line": 8,
@@ -88,7 +336,7 @@
           },
           {
             "result": {
-              "duration": 11000,
+              "duration": 31774900,
               "status": "passed"
             },
             "line": 9,
@@ -100,7 +348,7 @@
           },
           {
             "result": {
-              "duration": 7400,
+              "duration": 60711400,
               "status": "passed"
             },
             "line": 10,
@@ -112,7 +360,7 @@
           },
           {
             "result": {
-              "duration": 6800,
+              "duration": 63603900,
               "status": "passed"
             },
             "line": 11,
@@ -124,7 +372,7 @@
           },
           {
             "result": {
-              "duration": 6800,
+              "duration": 30813500,
               "status": "passed"
             },
             "line": 12,
@@ -136,7 +384,7 @@
           },
           {
             "result": {
-              "duration": 44769600,
+              "duration": 49348900,
               "status": "passed"
             },
             "line": 13,
@@ -148,7 +396,7 @@
           },
           {
             "result": {
-              "duration": 13200,
+              "duration": 3913000,
               "status": "passed"
             },
             "line": 14,
@@ -160,7 +408,7 @@
           },
           {
             "result": {
-              "duration": 47343100,
+              "duration": 91713600,
               "status": "passed"
             },
             "line": 15,
@@ -172,7 +420,7 @@
           },
           {
             "result": {
-              "duration": 12800,
+              "duration": 39537800,
               "status": "passed"
             },
             "line": 16,
@@ -184,7 +432,7 @@
           },
           {
             "result": {
-              "duration": 7000,
+              "duration": 30231000,
               "status": "passed"
             },
             "line": 17,
@@ -196,19 +444,19 @@
           },
           {
             "result": {
-              "duration": 6700,
+              "duration": 14600,
               "status": "passed"
             },
             "line": 18,
-            "name": "click on the login icon, and the user is taken to the login page",
+            "name": "click on the logout icon, and the user is taken to the login page",
             "match": {
-              "location": "CustDashStepdefination.click_on_the_login_icon_and_the_user_is_taken_to_the_login_page()"
+              "location": "CustDashStepdefination.click_on_the_logout_icon_and_the_user_is_taken_to_the_login_page()"
             },
             "keyword": "Then "
           },
           {
             "result": {
-              "duration": 1015233600,
+              "duration": 998047000,
               "status": "passed"
             },
             "line": 19,
@@ -240,7 +488,7 @@
         "steps": [
           {
             "result": {
-              "duration": 2052143200,
+              "duration": 2191225400,
               "status": "passed"
             },
             "line": 4,
@@ -252,7 +500,7 @@
           },
           {
             "result": {
-              "duration": 2417655000,
+              "duration": 3400074200,
               "status": "passed"
             },
             "line": 5,
@@ -273,7 +521,7 @@
           },
           {
             "result": {
-              "duration": 10231300,
+              "duration": 3096900,
               "status": "passed"
             },
             "line": 6,
@@ -285,7 +533,7 @@
           },
           {
             "result": {
-              "duration": 35457000,
+              "duration": 34091700,
               "status": "passed"
             },
             "line": 7,
@@ -297,7 +545,7 @@
           },
           {
             "result": {
-              "duration": 23755500,
+              "duration": 24372000,
               "status": "passed"
             },
             "line": 8,
@@ -309,7 +557,7 @@
           },
           {
             "result": {
-              "duration": 59422600,
+              "duration": 52998600,
               "status": "passed"
             },
             "line": 9,
@@ -321,7 +569,7 @@
           },
           {
             "result": {
-              "duration": 20266400,
+              "duration": 26885600,
               "status": "passed"
             },
             "line": 10,
@@ -333,7 +581,7 @@
           },
           {
             "result": {
-              "duration": 69182400,
+              "duration": 64473700,
               "status": "passed"
             },
             "line": 11,
@@ -345,7 +593,7 @@
           },
           {
             "result": {
-              "duration": 70454700,
+              "duration": 117229800,
               "status": "passed"
             },
             "line": 12,
@@ -366,7 +614,7 @@
           },
           {
             "result": {
-              "duration": 57340200,
+              "duration": 68746600,
               "status": "passed"
             },
             "line": 13,
@@ -387,7 +635,7 @@
           },
           {
             "result": {
-              "duration": 54920400,
+              "duration": 55000200,
               "status": "passed"
             },
             "line": 14,
@@ -399,7 +647,7 @@
           },
           {
             "result": {
-              "duration": 30299487200,
+              "duration": 30399537700,
               "status": "passed"
             },
             "line": 15,
@@ -411,7 +659,7 @@
           },
           {
             "result": {
-              "duration": 23713400,
+              "duration": 37229700,
               "status": "passed"
             },
             "line": 16,
@@ -423,7 +671,7 @@
           },
           {
             "result": {
-              "duration": 34871800,
+              "duration": 34719400,
               "status": "passed"
             },
             "line": 17,
@@ -435,7 +683,7 @@
           },
           {
             "result": {
-              "duration": 1147772600,
+              "duration": 1106245600,
               "status": "passed"
             },
             "line": 18,

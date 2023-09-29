@@ -2,12 +2,8 @@ package PageObjects;
 
 import static org.junit.Assert.assertEquals;
 
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-
 import org.assertj.core.api.SoftAssertions;
 import org.junit.Assert;
-import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -23,8 +19,7 @@ public class CustDashboard {
 		this.driver = driver;
 	}
 
-	By SideNavexpand = By
-			.xpath("//a[@class='sidebarOption list-group-item list-group-item-action d-flex align-items-center']");
+	By SideNavexpand = By.xpath("//a[@class='sidebarOption list-group-item list-group-item-action d-flex align-items-center']");
 	By SideNavsubexpand = By.xpath("//i[@id='submenuIconDis']");
 	By CloseSideNavexpand = By.xpath(
 			"//a[@class='sidebarOption list-group-item list-group-item-action d-flex align-items-center']//div[@class='d-flex w-100 justify-content-start align-items-center']");
@@ -133,16 +128,20 @@ public class CustDashboard {
 	}
 
 	public void BuildNum() {
+		
 		String BuildHashscode = driver.findElement(BuildNum).getText();
 		Assert.assertNotNull("Element should exist", BuildHashscode);
 	}
 
-	public WebElement LangugeIcon() {
-		return driver.findElement(LangugeIcon);
-
+	public void LangugeIcon() {
+		
+		WebElement LangugeIcon1 = driver.findElement(LangugeIcon);
+		Assert.assertTrue("Logout icon should exist.",LangugeIcon1.isDisplayed());
+		
 	}
 
 	public WebElement Welcome() {
+		
 		return driver.findElement(Welcome);
 
 	}
@@ -152,33 +151,51 @@ public class CustDashboard {
 
 	}
 
-	public WebElement LogOuticon() {
-		return driver.findElement(LogOuticon);
+	public void LogOuticon() {
+		
+		WebElement logoutIcon = driver.findElement(LogOuticon);
+		Assert.assertTrue("Logout icon should exist.", logoutIcon.isDisplayed());
 
 	}
 
-	public WebElement SerachDropdown() {
-		return driver.findElement(SerachDropdown);
+	public void SerachDropdown() {	
+		
+		WebElement SerachDropdown1 = driver.findElement(SerachDropdown);
+		Assert.assertTrue("Logout icon should exist.",SerachDropdown1.isDisplayed());
 	}
 
-	public WebElement SearchValue() {
-		return driver.findElement(SearchValue);
+	public void SearchValue() {
+		
+		WebElement SearchValue1 = driver.findElement(SearchValue);
+		Assert.assertTrue("Logout icon should exist.",SearchValue1.isDisplayed());
+	
 	}
 
-	public WebElement SearchBotton() {
-		return driver.findElement(SearchBotton);
+	public void SearchBotton() {
+	
+		WebElement SearchBotton1 = driver.findElement(SearchBotton);
+		Assert.assertTrue("Logout icon should exist.",SearchBotton1.isDisplayed());
 	}
 
-	public WebElement CreateRfq() {
-		return driver.findElement(CreateRfq);
+	public void CreateRfq() {
+		
+		WebElement CreateRfq1 = driver.findElement(CreateRfq);
+		Assert.assertTrue("Logout icon should exist.",CreateRfq1.isDisplayed());
+	
 	}
 
-	public WebElement ClearBotton() {
-		return driver.findElement(ClearBotton);
+	public void ClearBotton() {
+		
+		WebElement ClearBotton1 = driver.findElement(ClearBotton);
+		Assert.assertTrue("Logout icon should exist.",ClearBotton1.isDisplayed());
+	
 	}
 
-	public WebElement SearchFeild() {
-		return driver.findElement(SearchFeild);
+	public void SearchFeild() {
+
+		WebElement SearchFeild1 = driver.findElement(SearchFeild);
+		Assert.assertTrue("Logout icon should exist.",SearchFeild1.isDisplayed());
+	
 	}
 
 	public void RfqNumb() {
@@ -247,49 +264,28 @@ public class CustDashboard {
 
 	public void EditRfq() {
 		
-		/*
-		 * String actualText = "Edit R.F.Q."; verifyTextAndClickability(actualText,
-		 * EditRfq);
-		 */
-
-		}
+		WebElement EditRfq1 = driver.findElement(EditRfq);
+		Assert.assertTrue("Logout icon should exist.",EditRfq1.isDisplayed());
 		
-
+		}
 
 	public void ObsoluteBotton() {
-	
-		/*
-		 * String actualText = "Obsolete"; verifyTextAndClickability(actualText,
-		 * ObsoluteBotton);
-		 */
+		
+		WebElement ObsoluteBotton1 = driver.findElement(ObsoluteBotton);
+		Assert.assertTrue("Logout icon should exist.",ObsoluteBotton1.isDisplayed());
 	}
 
-	
-	  public WebElement ObsoluteNo() { return driver.findElement(ObsoluteNo); }
-	 
-
-	
-	  public WebElement ObsoluteYes() { return driver.findElement(ObsoluteYes); }
-	 
-
-	
-	  public WebElement ObsoluteComment() {
-		  
-		/* return driver.findElement(ObsoluteComment); */
-		  }
-	 
 
 	public void DataSheet() {
-		/*
-		 * String actualText = "Datasheet"; verifyTextAndClickability(actualText,
-		 * DataSheet);
-		 */
+		
+		WebElement DataSheet1 = driver.findElement(DataSheet);
+		Assert.assertTrue("Logout icon should exist.",DataSheet1.isDisplayed());
 		
 	}
 
 	/// all methods
 
-	private boolean isElementClickable(WebElement element) {
+	public boolean isElementClickable(WebElement element) {
 		try {
 			element.click(); // Attempt to click the element
 			return true; // Element is clickable

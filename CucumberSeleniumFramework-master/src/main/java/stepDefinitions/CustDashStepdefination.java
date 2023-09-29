@@ -71,42 +71,40 @@ public class CustDashStepdefination {
 
 	@When("^verifies the existence and clickability of the Search button$")
 	public void verifies_the_existence_and_clickability_of_the_Search_button() {
-
-		String ExpextedBoldltter = "http://192.168.150.20:8080/bottie_quote/dashboard.html";
-		assertEquals("Eror while fatching quote dashboard url", ExpextedBoldltter, driver.getCurrentUrl());
-
+		Cd.SearchBotton();
 	}
 
 	@When("^verifies the existence and clickability of the Create RFQ button$")
 	public void verifies_the_existence_and_clickability_of_the_Create_RFQ_button() {
-
+      Cd.CreateRfq();
 	}
 
 	@When("^verifies the existence of the Search Dropdown with a specific value$")
 	public void verifies_the_existence_of_the_Search_Dropdown_with_a_specific_value() {
-
+		Cd.SerachDropdown();
+		Cd.SearchValue();
 	}
 
 	@When("^verifies the existence and clickability of the Clear button$")
 	public void verifies_the_existence_and_clickability_of_the_Clear_button() {
-
+		Cd.ClearBotton();
 	}
 
 	@When("^verifies the exisistence of the search text box and confirms that the user can enter text$")
-	public void verifies_the_exisistence_of_the_search_text_box_and_confirms_that_the_user_can_enter_text() {
-
+	public void verifies_the_exisistence_of_the_search_text_box_and_confirms_that_the_user_can_enter_text() {	
+		Cd.SearchFeild();
 	}
 
 	@When("^verifies the presence of the Unimicron logo$")
 	public void verifies_the_presence_of_the_Unimicron_logo() {
 		Cd.UnimicironLogo();
 		Cd.UnimicironText();
-
 	}
 
 	@When("^verifies the BQ title$")
 	public void verifies_the_BQ_title() {
-
+		String ExpextedBoldltter = "http://192.168.150.20:8080/bottie_quote/dashboard.html";
+		assertEquals("Eror while fatching quote dashboard url", ExpextedBoldltter, driver.getCurrentUrl());
 	}
 
 	@When("^verifies the application version$")
@@ -117,16 +115,16 @@ public class CustDashStepdefination {
 
 	@When("^verifies the existence of the language icon and confirms its clickability$")
 	public void verifies_the_existence_of_the_language_icon_and_confirms_its_clickability() {
-
+		Cd.LangugeIcon();
 	}
 
 	@When("^verifies the existence of the logout icon$")
 	public void verifies_the_existence_of_the_logout_icon() {
-
+	 Cd.LogOuticon(); 	
 	}
 
-	@Then("^click on the login icon, and the user is taken to the login page$")
-	public void click_on_the_login_icon_and_the_user_is_taken_to_the_login_page() {
+	@Then("^click on the logout icon, and the user is taken to the login page$")
+	public void click_on_the_logout_icon_and_the_user_is_taken_to_the_login_page() {
 
 	}
 

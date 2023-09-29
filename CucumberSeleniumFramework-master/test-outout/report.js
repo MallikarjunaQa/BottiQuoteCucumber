@@ -1,4 +1,248 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("Custdash.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("CreateRFq.feature");
+formatter.feature({
+  "line": 1,
+  "name": "RFQ Creation on Customer Dashboard",
+  "description": "",
+  "id": "rfq-creation-on-customer-dashboard",
+  "keyword": "Feature"
+});
+formatter.scenario({
+  "line": 3,
+  "name": "Create RFQ with Valid Information and Verify Additional Conditions",
+  "description": "",
+  "id": "rfq-creation-on-customer-dashboard;create-rfq-with-valid-information-and-verify-additional-conditions",
+  "type": "scenario",
+  "keyword": "Scenario"
+});
+formatter.step({
+  "line": 4,
+  "name": "User navigates to the Customer Dashboard",
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 5,
+  "name": "User clicks on the Create RFQ button",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 6,
+  "name": "navigated to the Create RFQ page",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 7,
+  "name": "Inquiry date is the same as the created date",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 8,
+  "name": "If priority is normal, Due date UMG to NCS is four days ahead and is disabled",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 9,
+  "name": "If priority is QTA, Due date NCS to UMG is the next date of the created date",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 10,
+  "name": "Status UMG to Cust is open by default and is disabled",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 11,
+  "name": "Status NCS to UMG is open and is disabled",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 12,
+  "name": "User enters the account number",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 13,
+  "name": "Customer number is not null and is disabled",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 14,
+  "name": "Customer city is not null and is disabled",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 15,
+  "name": "Account manager is not null and selected from dropdown",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 16,
+  "name": "Salesperson is not null and selected from dropdown",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 17,
+  "name": "User adds remarks from the sales area",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 18,
+  "name": "User adds comments from the NCS engineer area",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 19,
+  "name": "User attaches files (drag \u0026 drop, upload, remove)",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 20,
+  "name": "User verifies top bar features",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 21,
+  "name": "User verifies side nav bar features",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 22,
+  "name": "RFQ is successfully created",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "CreateRfqStepdefination.user_navigates_to_the_Customer_Dashboard()"
+});
+formatter.result({
+  "duration": 5685530700,
+  "status": "passed"
+});
+formatter.match({
+  "location": "CreateRfqStepdefination.user_clicks_on_the_Create_RFQ_button()"
+});
+formatter.result({
+  "duration": 4905086400,
+  "status": "passed"
+});
+formatter.match({
+  "location": "CreateRfqStepdefination.navigated_to_the_Create_RFQ_page()"
+});
+formatter.result({
+  "duration": 3872700,
+  "status": "passed"
+});
+formatter.match({
+  "location": "CreateRfqStepdefination.inquiry_date_is_the_same_as_the_created_date()"
+});
+formatter.result({
+  "duration": 183723600,
+  "status": "passed"
+});
+formatter.match({
+  "location": "CreateRfqStepdefination.if_priority_is_normal_Due_date_UMG_to_NCS_is_4_days_ahead_and_is_disabled()"
+});
+formatter.result({
+  "duration": 167436700,
+  "status": "passed"
+});
+formatter.match({
+  "location": "CreateRfqStepdefination.if_priority_is_QTA_Due_date_NCS_to_UMG_is_the_next_date_of_the_created_date()"
+});
+formatter.result({
+  "duration": 11900,
+  "status": "passed"
+});
+formatter.match({
+  "location": "CreateRfqStepdefination.status_UMG_to_Cust_is_open_by_default_and_is_disabled()"
+});
+formatter.result({
+  "duration": 7500,
+  "status": "passed"
+});
+formatter.match({
+  "location": "CreateRfqStepdefination.status_NCS_to_UMG_is_open_and_is_disabled()"
+});
+formatter.result({
+  "duration": 7500,
+  "status": "passed"
+});
+formatter.match({
+  "location": "CreateRfqStepdefination.user_enters_the_account_number()"
+});
+formatter.result({
+  "duration": 7600,
+  "status": "passed"
+});
+formatter.match({
+  "location": "CreateRfqStepdefination.customer_number_is_not_null_and_is_disabled()"
+});
+formatter.result({
+  "duration": 7700,
+  "status": "passed"
+});
+formatter.match({
+  "location": "CreateRfqStepdefination.customer_city_is_not_null_and_is_disabled()"
+});
+formatter.result({
+  "duration": 22100,
+  "status": "passed"
+});
+formatter.match({
+  "location": "CreateRfqStepdefination.account_manager_is_not_null_and_selected_from_dropdown()"
+});
+formatter.result({
+  "duration": 6800,
+  "status": "passed"
+});
+formatter.match({
+  "location": "CreateRfqStepdefination.salesperson_is_not_null_and_selected_from_dropdown()"
+});
+formatter.result({
+  "duration": 6900,
+  "status": "passed"
+});
+formatter.match({
+  "location": "CreateRfqStepdefination.user_adds_remarks_from_the_sales_area()"
+});
+formatter.result({
+  "duration": 6700,
+  "status": "passed"
+});
+formatter.match({
+  "location": "CreateRfqStepdefination.user_adds_comments_from_the_NCS_engineer_area()"
+});
+formatter.result({
+  "duration": 6800,
+  "status": "passed"
+});
+formatter.match({
+  "location": "CreateRfqStepdefination.user_attaches_files_drag_drop_upload_remove()"
+});
+formatter.result({
+  "duration": 6800,
+  "status": "passed"
+});
+formatter.match({
+  "location": "CreateRfqStepdefination.user_verifies_top_bar_features()"
+});
+formatter.result({
+  "duration": 6900,
+  "status": "passed"
+});
+formatter.match({
+  "location": "CreateRfqStepdefination.user_verifies_side_nav_bar_features()"
+});
+formatter.result({
+  "duration": 6700,
+  "status": "passed"
+});
+formatter.match({
+  "location": "CreateRfqStepdefination.rfq_is_successfully_created()"
+});
+formatter.result({
+  "duration": 12100,
+  "status": "passed"
+});
+formatter.uri("Custdash.feature");
 formatter.feature({
   "line": 1,
   "name": "Customer Quotation Dashboard page",
@@ -86,7 +330,7 @@ formatter.step({
 });
 formatter.step({
   "line": 18,
-  "name": "click on the login icon, and the user is taken to the login page",
+  "name": "click on the logout icon, and the user is taken to the login page",
   "keyword": "Then "
 });
 formatter.step({
@@ -104,7 +348,7 @@ formatter.match({
   "location": "CustDashStepdefination.the_User_is_logged_in_with_already_on_the_Customer_Quotation_Dashboard_page(String)"
 });
 formatter.result({
-  "duration": 6915644100,
+  "duration": 5509979100,
   "status": "passed"
 });
 formatter.match({
@@ -121,105 +365,105 @@ formatter.match({
   "location": "CustDashStepdefination.the_User_navigates_to_Customer_Quotations_Page(String,String)"
 });
 formatter.result({
-  "duration": 63000,
+  "duration": 70000,
   "status": "passed"
 });
 formatter.match({
   "location": "CustDashStepdefination.verifies_the_existence_and_clickability_of_the_side_navigation_bar()"
 });
 formatter.result({
-  "duration": 2159925100,
+  "duration": 2885506200,
   "status": "passed"
 });
 formatter.match({
   "location": "CustDashStepdefination.verifies_the_existence_of_the_quotation_table_with_table_headers()"
 });
 formatter.result({
-  "duration": 1347062400,
+  "duration": 1407819700,
   "status": "passed"
 });
 formatter.match({
   "location": "CustDashStepdefination.verifies_the_existence_and_clickability_of_the_Search_button()"
 });
 formatter.result({
-  "duration": 4090600,
+  "duration": 29474400,
   "status": "passed"
 });
 formatter.match({
   "location": "CustDashStepdefination.verifies_the_existence_and_clickability_of_the_Create_RFQ_button()"
 });
 formatter.result({
-  "duration": 11000,
+  "duration": 31774900,
   "status": "passed"
 });
 formatter.match({
   "location": "CustDashStepdefination.verifies_the_existence_of_the_Search_Dropdown_with_a_specific_value()"
 });
 formatter.result({
-  "duration": 7400,
+  "duration": 60711400,
   "status": "passed"
 });
 formatter.match({
   "location": "CustDashStepdefination.verifies_the_existence_and_clickability_of_the_Clear_button()"
 });
 formatter.result({
-  "duration": 6800,
+  "duration": 63603900,
   "status": "passed"
 });
 formatter.match({
   "location": "CustDashStepdefination.verifies_the_exisistence_of_the_search_text_box_and_confirms_that_the_user_can_enter_text()"
 });
 formatter.result({
-  "duration": 6800,
+  "duration": 30813500,
   "status": "passed"
 });
 formatter.match({
   "location": "CustDashStepdefination.verifies_the_presence_of_the_Unimicron_logo()"
 });
 formatter.result({
-  "duration": 44769600,
+  "duration": 49348900,
   "status": "passed"
 });
 formatter.match({
   "location": "CustDashStepdefination.verifies_the_BQ_title()"
 });
 formatter.result({
-  "duration": 13200,
+  "duration": 3913000,
   "status": "passed"
 });
 formatter.match({
   "location": "CustDashStepdefination.verifies_the_application_version()"
 });
 formatter.result({
-  "duration": 47343100,
+  "duration": 91713600,
   "status": "passed"
 });
 formatter.match({
   "location": "CustDashStepdefination.verifies_the_existence_of_the_language_icon_and_confirms_its_clickability()"
 });
 formatter.result({
-  "duration": 12800,
+  "duration": 39537800,
   "status": "passed"
 });
 formatter.match({
   "location": "CustDashStepdefination.verifies_the_existence_of_the_logout_icon()"
 });
 formatter.result({
-  "duration": 7000,
+  "duration": 30231000,
   "status": "passed"
 });
 formatter.match({
-  "location": "CustDashStepdefination.click_on_the_login_icon_and_the_user_is_taken_to_the_login_page()"
+  "location": "CustDashStepdefination.click_on_the_logout_icon_and_the_user_is_taken_to_the_login_page()"
 });
 formatter.result({
-  "duration": 6700,
+  "duration": 14600,
   "status": "passed"
 });
 formatter.match({
   "location": "CustDashStepdefination.quit_the_browser()"
 });
 formatter.result({
-  "duration": 1015233600,
+  "duration": 998047000,
   "status": "passed"
 });
 formatter.uri("Login.feature");
@@ -438,7 +682,7 @@ formatter.match({
   "location": "LoginStepdefination.the_user_opens_a_Chrome_browser()"
 });
 formatter.result({
-  "duration": 2052143200,
+  "duration": 2191225400,
   "status": "passed"
 });
 formatter.match({
@@ -451,49 +695,49 @@ formatter.match({
   "location": "LoginStepdefination.the_user_enter_to_the_BQ_login_URL(String)"
 });
 formatter.result({
-  "duration": 2417655000,
+  "duration": 3400074200,
   "status": "passed"
 });
 formatter.match({
   "location": "LoginStepdefination.varify_title()"
 });
 formatter.result({
-  "duration": 10231300,
+  "duration": 3096900,
   "status": "passed"
 });
 formatter.match({
   "location": "LoginStepdefination.varify_LoginPage_LargeBluebox()"
 });
 formatter.result({
-  "duration": 35457000,
+  "duration": 34091700,
   "status": "passed"
 });
 formatter.match({
   "location": "LoginStepdefination.user_will_see_Withbotti_quote_in_bolt_latters()"
 });
 formatter.result({
-  "duration": 23755500,
+  "duration": 24372000,
   "status": "passed"
 });
 formatter.match({
   "location": "LoginStepdefination.placeholder_as_User_Name()"
 });
 formatter.result({
-  "duration": 59422600,
+  "duration": 52998600,
   "status": "passed"
 });
 formatter.match({
   "location": "LoginStepdefination.placeholder_as_Password()"
 });
 formatter.result({
-  "duration": 20266400,
+  "duration": 26885600,
   "status": "passed"
 });
 formatter.match({
   "location": "LoginStepdefination.by_defult_in_English()"
 });
 formatter.result({
-  "duration": 69182400,
+  "duration": 64473700,
   "status": "passed"
 });
 formatter.match({
@@ -506,7 +750,7 @@ formatter.match({
   "location": "LoginStepdefination.enters_the_username(String)"
 });
 formatter.result({
-  "duration": 70454700,
+  "duration": 117229800,
   "status": "passed"
 });
 formatter.match({
@@ -519,42 +763,42 @@ formatter.match({
   "location": "LoginStepdefination.enters_the_password(String)"
 });
 formatter.result({
-  "duration": 57340200,
+  "duration": 68746600,
   "status": "passed"
 });
 formatter.match({
   "location": "LoginStepdefination.clicks_on_the_login_button()"
 });
 formatter.result({
-  "duration": 54920400,
+  "duration": 55000200,
   "status": "passed"
 });
 formatter.match({
   "location": "LoginStepdefination.succeful_authentication_mesg()"
 });
 formatter.result({
-  "duration": 30299487200,
+  "duration": 30399537700,
   "status": "passed"
 });
 formatter.match({
   "location": "LoginStepdefination.unimicorn_logo_present()"
 });
 formatter.result({
-  "duration": 23713400,
+  "duration": 37229700,
   "status": "passed"
 });
 formatter.match({
   "location": "LoginStepdefination.the_user_should_be_on_the_BQ_dashboard_page()"
 });
 formatter.result({
-  "duration": 34871800,
+  "duration": 34719400,
   "status": "passed"
 });
 formatter.match({
   "location": "LoginStepdefination.close_the_browser()"
 });
 formatter.result({
-  "duration": 1147772600,
+  "duration": 1106245600,
   "status": "passed"
 });
 });

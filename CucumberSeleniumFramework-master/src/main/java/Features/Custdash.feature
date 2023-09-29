@@ -15,5 +15,5 @@ Feature: Customer Quotation Dashboard page
     And verifies the application version
     And verifies the existence of the language icon and confirms its clickability
     And verifies the existence of the logout icon
-    Then click on the login icon, and the user is taken to the login page
+    Then click on the logout icon, and the user is taken to the login page
     Then quit the browser
