@@ -6,7 +6,6 @@ Feature: RFQ Creation on Customer Dashboard
     And navigated to the Create RFQ page
     And Inquiry date is the same as the created date
     And If priority is normalandQta, Due date UMG to Cust is four days ahead and is disabled
-    And If priority is QTA, Due date NCS to UMG is the next date of the created date
     And Status UMG to Cust is open by default and is disabled
     And Status NCS to UMG is open and is disabled
     And User enters the account number

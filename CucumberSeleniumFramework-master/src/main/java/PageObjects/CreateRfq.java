@@ -33,14 +33,9 @@ public class CreateRfq {
 	By InqDate = By.xpath("//*[@id=\"enquiryDate\"]");
 	By DueDateUnimicrontoCustomer = By.xpath("//*[@id=\"dueDateUnimToCustm\"]");
 	By DueDateNCStoUMG = By.xpath("//*[@id=\"dueDateNcsToUnim\"]");
-	
-	
-	
-	
-	
-	
-	
-	
+	By DueDateNcsToUnim = By.xpath("//*[@id=\"dueDateNcsToUnim\"]");
+	By StatusUMGtoNCS = By.xpath("//*[@id=\"unimtocustStatus\"]");
+	By StatusNCStoUMG = By.xpath("//*[@id=\"status\"]");
 	
 	
 	
@@ -110,7 +105,7 @@ public class CreateRfq {
 	    if (selectedPriority.equals("Normal")) {
 	        c.add(Calendar.DATE, 4); // Adding 4 days
 	    } else if (selectedPriority.equals("QTA")) {
-	        c.add(Calendar.DATE, -3); // Subtracting 3 days
+	        c.add(Calendar.DATE, 1); // Subtracting 3 days
 	    }
 
 	    String expectedDueDate = sdf.format(c.getTime());
@@ -122,29 +117,45 @@ public class CreateRfq {
 	
 	public void DueDateNCStoUMG() {
 		
-		
-		
-		 WebElement dueDateElement = driver.findElement(By.id("dueDateUnimToCustm"));
-		    String actualDueDate = dueDateElement.getAttribute("value");
+		WebElement DueDateNcsToUnim1 = driver.findElement(DueDateNcsToUnim);
+		String DueDateNcsToUnim2 = DueDateNcsToUnim1.getAttribute("value");
 
-		    SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
-		    Calendar c = Calendar.getInstance();
+		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+		Calendar c = Calendar.getInstance();
+		c.add(Calendar.DATE, 1);
+		String expectedDueDate2 = sdf.format(c.getTime());
 		
-		
-		
+		assertEquals("Due Date NCS to Unimicron not match the expected value", expectedDueDate2, DueDateNcsToUnim2);
 		
 	}
 	
 	
+	public void StatusUMGtoNCS() {
+		
+		WebElement DueDateNcsToUnim1 = driver.findElement(StatusUMGtoNCS);
+		Select dropdown = new Select(DueDateNcsToUnim1);
+		WebElement selectedOption = dropdown.getFirstSelectedOption();
+		String selectedLabel = selectedOption.getText();
+		String ExpectDueDateNcsToUnim1 = "Open";
+		assertEquals("Status UMG to NCS not match the expected value", ExpectDueDateNcsToUnim1, selectedLabel);
+		boolean disabledStatusUMGtoNCS = DueDateNcsToUnim1.isEnabled();
+		Assert.assertFalse("disabled Status NCS to UMG feild", disabledStatusUMGtoNCS);
+		
+	}
+
+	public void StatusNCStoUMG() {
+		
+		WebElement StatusNCStoUMG1 = driver.findElement(StatusNCStoUMG);
+		Select SelectStatusNCStoUMG1 = new Select(StatusNCStoUMG1);
+		
+		WebElement SelectStatusNCStoUMG2 = SelectStatusNCStoUMG1.getFirstSelectedOption();
+		String SelectStatusNCStoUMG3 = SelectStatusNCStoUMG2.getText();
+		String ExpectStatusNCStoUMG = "Open";
+		assertEquals("Status  NCS to UMG not match the expected value", ExpectStatusNCStoUMG , SelectStatusNCStoUMG3);
+		boolean  disabledStatusNCStoUMG = StatusNCStoUMG1.isEnabled();
+		Assert.assertFalse("disabled Status NCS to UMG feild", disabledStatusNCStoUMG);
 	
-	
-	
-	
-	
-	
-	
-	
-	
+	}
 	
 	
 	// All methods

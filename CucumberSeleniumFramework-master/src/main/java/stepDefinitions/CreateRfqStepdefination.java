@@ -36,6 +36,7 @@ public class CreateRfqStepdefination {
 	@When("^User clicks on the Create RFQ button$")
 	public void user_clicks_on_the_Create_RFQ_button() throws InterruptedException {
 	    Cr.CrateRfqBotton();
+	  
 	}
 
 	@When("^navigated to the Create RFQ page$")
@@ -56,24 +57,21 @@ public class CreateRfqStepdefination {
 	}
   
 	@When(" Due date NCS to UMG is the next date of the created date$")
-	public void if_priority_is_QTA_Due_date_NCS_to_UMG_is_the_next_date_of_the_created_date()  { 
-		 
+	public void if_priority_is_QTA_Due_date_NCS_to_UMG_is_the_next_date_of_the_created_date()  { 	
+		Cr.DueDateNCStoUMG();
+		
 	}
 	
 
 	@When("^Status UMG to Cust is open by default and is disabled$")
 	public void status_UMG_to_Cust_is_open_by_default_and_is_disabled()  {
-	    
-	     
-		
-		
-		
+		Cr.StatusUMGtoNCS();
 	}
 
 	@When("^Status NCS to UMG is open and is disabled$")
 	public void status_NCS_to_UMG_is_open_and_is_disabled()  {
 	    
-	     
+	     Cr.StatusNCStoUMG();
 	}
 
 	@When("^User enters the account number$")
